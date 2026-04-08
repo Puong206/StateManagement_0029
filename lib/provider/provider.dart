@@ -23,5 +23,8 @@ class MyApp extends StatelessWidget {
 
 //Model
 class FormProvider extends ChangeNotifier {
+  String nama = "";
+  String email = "";
+
   
 }
