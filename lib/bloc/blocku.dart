@@ -47,18 +47,24 @@ class FormPage4 extends StatelessWidget {
             return Column(
               children: [
                 TextField(
-                  onChanged: (value) {
-                    context.read<FormBloc>().add(NamaChanged(value));
-                  },
-                  decoration: InputDecoration(labelText: 'Nama'),
+                  onChanged: (value) =>
+                    context.read<FormBloc>().add(NamaChanged(value)),
                 ),
                 TextField(
-                  onChanged: (value) {
-                    context.read<FormBloc>().add(EmailChanged(value));
-                  },
-                  decoration: InputDecoration(labelText: 'Email'),
+                  onChanged: (value) =>
+                    context.read<FormBloc>().add(EmailChanged(value)),
                 ),
-                SizedBox(height: 16),
+                ElevatedButton(
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('Submit sukses!')
+                      ),
+                    );
+                  },
+                  child: Text('Submit'),
+                ),
+                SizedBox(height: 10),
+
                 Text('Nama: ${state.nama}'),
                 Text('Email: ${state.email}'),
               ],
