@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_riverpod/legacy.dart';
+import 'package:statemanagementtheory/bloc/blocku.dart';
 
 
 final namaProvider = StateProvider<String>((ref) => "");
 final emailProvider = StateProvider<String>((ref) => "");
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    BlocProvider(
+      create: (context) => FormBloc(),
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
