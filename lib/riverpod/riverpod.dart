@@ -6,6 +6,14 @@ import 'package:flutter_riverpod/legacy.dart';
 final namaProvider = StateProvider<String>((ref) => "");
 final emailProvider = StateProvider<String>((ref) => "");
 
+void main() {
+  runApp(
+    ProviderScope(
+      child: MyApp(),
+    ),
+  );
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
