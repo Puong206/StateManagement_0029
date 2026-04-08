@@ -36,3 +36,8 @@ class FormProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
+
+//UI
+class FormPage extends StatelessWidget {
+  
+}
