@@ -20,3 +20,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+//Model
+class FormProvider extends ChangeNotifier {
+  
+}
