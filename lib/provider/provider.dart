@@ -39,5 +39,12 @@ class FormProvider extends ChangeNotifier {
 
 //UI
 class FormPage extends StatelessWidget {
-  
+  @override
+  Widget build(BuildContext context) {
+    final form = Provider.of<FormProvider>(context);
+
+    return Scaffold(
+      
+    )
+  } 
 }
